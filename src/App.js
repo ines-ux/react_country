@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Button from './components/core/Button';
 
 class App extends React.Component {
 	constructor(props) {
@@ -30,13 +31,16 @@ class App extends React.Component {
 		});
 	}
 
+	onClickCountry() {}
+
 	render() {
 		return (
 			<div>
 				<h1> Selector Country </h1>
-				<button>France</button>
-				<button>Brazil</button>
-				<button>Croatia</button>
+
+				<Button name="France" />
+				<Button name="Brazil" />
+				<Button name="Croatia" />
 				<div>
 					<img src={this.state.flag} alt="" />
 					<h3>Country : {this.state.name} </h3>
@@ -44,6 +48,7 @@ class App extends React.Component {
 					<p>Region : {this.state.region} </p>
 					<p>Population : {this.state.population} </p>
 				</div>
+				<Button />
 			</div>
 		);
 	}
